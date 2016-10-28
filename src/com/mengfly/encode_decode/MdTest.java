@@ -11,7 +11,7 @@ import org.bouncycastle.crypto.digests.MD4Digest;
 import org.bouncycastle.crypto.digests.MD5Digest;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-public class DMTest {
+public class MdTest {
 	
 	private static String src = "I'm Learning MD";
 

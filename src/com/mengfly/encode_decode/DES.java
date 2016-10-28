@@ -21,6 +21,9 @@ public class DES {
 	
 	private static final String src = "I'm Learing DES";
 	
+	/**
+	 * jdk实现DES加密
+	 */
 	public static void jdkDES() {
 		try {
 			//生成密钥

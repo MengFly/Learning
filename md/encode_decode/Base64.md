@@ -152,8 +152,8 @@ public static void bouncyCastleBase64() {
 }
 ```
 
-
-
+### 例子程序
++ [Base64Test.java](https://github.com/zuoyandeyingguang/JavaLearning/tree/master/src/com/mengfly/encode_decode/Base64Test.java)
 
 
 
