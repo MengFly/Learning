@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>属性筛选器</title>
+
+<script src="jquery.js" type="text/javascript"></script>
+<link rel="stylesheet" href="imooc.css" type="text/css">
+</head>
+
+	<table border="1">
+    	<tr>
+        	<th>选择器</th>
+            <th>描述</th>
+        </tr>
+        
+        <tr>
+        	<td>$("[attribute|='value']")</td>
+            <td>选择指定属性值等于给定字符串或以该文字串为前缀（该字符串后跟一个连字符"-"的元素）</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute*='value']")</td>
+            <td>选择指定属性具有包含一个给定字符串的元素（选择给定的属性是以包含某些值得元素）</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute~='value']")</td>
+            <td>选择指定属性用空格分隔的值中包含一个给定值的元素</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute='value']")</td>
+            <td>选择指定属性是给定值的元素</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute!='value']")</td>
+            <td>选择不存在制定属性，或者制定属性不等于给定值的元素</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute^='value']")</td>
+            <td>选择指定属性是以给定字符串开始的元素</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute$='vable']")</td>
+            <td>选择指定属性是以给定值结尾的元素，这个比较是区分大小写的</td>
+        </tr>
+        <tr>
+        	<td>$("[attribute]")</td>
+            <td>选择具有指定属性的元素，该属性可以是任何值</td>
+        </tr>
+        <tr>
+        	<td>$("[attributeFilter1][attributeFilterN]")</td>
+            <td>选择匹配所有指定的属性筛选器的元素</td>
+        </tr>
+    	
+    </table>
+
+
+	
+    [att=val]、[att]、[att|=val]、[att~=val]  属于CSS 2.1规范
+    [ns|attr]、[att^=val]、[att*=val]、[att$=val] 属于CSS3规范
+    [name!="value"]  属于jQuery 扩展的选择器
+
+	CSS选择器无论CSS2.1版本还是CSS3版本，IE7和IE8都支持，webkit、Gecko核心及Opera也都支持，只有IE6以下浏览器才不支持
+    
+    在这么多属性选择器中[attr="value"]和[attr*="value"]是最实用的
+    
+    
+
+	 <h2>属性筛选选择器</h2>
+    <h3>[att=val]、[att]、[att|=val]、[att~=val]</h3>
+    <div class="left" testattr="true" >
+        <div class="div" testattr="true" name='p1'>
+            <a>[att=val]</a>
+        </div>
+        <div class="div" testattr="true" p2>
+            <a>[att]</a>
+        </div>
+        <div class="div" testattr="true" name="-">
+            <a>[att|=val]</a>
+        </div>
+        <div class="div" testattr="true" name="a b">
+            <a>[att~=val]</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+         //查找所有div中，属性name=p1的div元素
+         $("div[name=p1]").css("border", "3px groove red"); 
+    </script>
+
+    <script type="text/javascript">
+        //查找所有div中，有属性p2的div元素
+        $("div[p2]").css("border", "3px groove blue"); 
+    </script>
+
+    <script type="text/javascript">
+        //查找所有div中，有属性name中的值只包含一个连字符“-”的div元素
+        $("div[name|='-']").css("border", "3px groove #00FF00"); 
+    </script>
+
+    <script type="text/javascript">
+        //查找所有div中，有属性name中的值包含一个连字符“空”的div元素
+        $("div[name~='a']").css("border", "3px groove #668B8B"); 
+    </script>
+
+
+    <h3>[att^=val]、[att*=val]、[att$=val]、[att!=val]</h3>
+    <div class="left" testattr="true" >
+        <div class="div" testattr="true"  name='imooc-aaorn'>
+            <a>[att^=val]</a>
+        </div>
+        <div class="div" testattr="true"  name='aaorn-imooc'>
+            <a>[att$=val]</a>
+        </div>
+        <div class="div" testattr="true"  name="attr-test-selector">
+            <a>[att*=val]</a>
+        </div>
+        <div class="div" name="a b">
+            <a>[att!=val]</a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+         //查找所有div中，属性name的值是用imooc开头的
+         $("div[name^='imooc']").css("border", "3px groove red"); 
+    </script>
+
+    <script type="text/javascript">
+         //查找所有div中，属性name的值是用imooc结尾的
+         $("div[name$='imooc']").css("border", "3px groove blue"); 
+    </script>
+
+    <script type="text/javascript">
+        //查找所有div中，有属性name中的值包含一个test字符串的div元素
+        $("div[name*='test']").css("border", "3px groove #00FF00"); 
+    </script>
+
+    <script type="text/javascript">
+        //查找所有div中，有属性testattr中的值没有包含"true"的div
+        $("div[testattr!='true']").css("border", "3px groove #668B8B"); 
+    </script>
+
+<body>
+</body>
+</html>

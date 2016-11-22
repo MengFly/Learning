@@ -1,0 +1,98 @@
+Alt + 7 : 查看类的方法和变量
+
+Android Studio自动导包：
+	Setting --> Editor --> General --> Auto Import
+	将下面几个勾选就可以了
+	show import popup
+	Optimize imports on the fly
+	Add unambiguous imports on this fly
+
+Alt + insert : 生成get和set方法
+
+Ctrl + O : 实现继承的方法
+
+Alt + Shift + T : 添加代码块
+
+Alt + Shift + B : 查看继承或者实现的方法
+
+Ctrl + Shift + V : 将变量抽取出来
+
+Ctrl + W : 扩大选择范围
+
+Ctrl + Q : 查看代码文档
+
+Ctrl + Tab : 在打开过的文档里面进行选择打开
+
+Ctrl + P : 显示方法参数
+
+Ctrl + J : 新建代码块
+
+Menu + CompareWithClipbaord : 和粘贴板里面的内容进行对比
+
+Ctrl + Shift + A : 查找操作
+
+Hide All Windows : 隐藏所有面板
+
+Highr All The Things : 高亮所有选择的文字
+
+F12 或者 Jump To Last Tools Windows : 返回上一个工具窗口
+
+Ctrl + Shift + BackSpace （Last Edit Location）: 返回上一次编辑的位置
+
+Ctrl + Shift + N : 打开文件
+
+Ctrl + U : 定位到父类
+
+Alt + 数字 : 打开特定的工具窗口
+
+Ctrl + (鼠标点击Tab) : 在外部打开文件
+
+Ctrl + I(Quick Definition) : 查看方法定义 
+
+Ctrl + Shift + E（Recently Changed Files） : 最近修改的文件
+
+Ctrl + E(Recents) : 最近打开的文件
+
+Ctrl + Alt + Home(Related Symbol) : 在资源文件和Activity/Fragment之间跳转
+
+Esc / Shift + Esc : 返回编辑器/退出tools windows并返回编辑器
+
+Alt + F1(Select In) : 选择在哪里打开当前文件
+
+Alt + J : 类似于Sublime里面的Ctrl + D，多处光标进行编辑
+
+Alt + F12(File Structure) : 显示文件结构（方法属性）
+
+Ctrl + Tab : 在导航栏tab和面板之间切换
+
+Alt + ` : Git(VCS Operations Popup): 控制窗口
+
+Alt + Shift + Insert(Column Selection Mode) : 打开或者关闭多列选择编辑
+
+Ctrl + Shift + Enter(Complete Current Statement) : 补全代码
+
+Alt + Enter --> Check Regexp : 编写检测正则表达式
+
+用 Enter 进行代码补全不会删除后面的代码，用 Tab 进行代码补全删除后面的代码
+
+Ctrl + M(Method) : 抽取方法
+
+Ctrl + Alt + V(Variable) : 提取变量，使用 Shift + Tab 修改类型
+
+Ctrl + Shift + J : 合并行和文本
+
+Ctrl + J(Live Template) : 代码模板
+
+Ctrl + Shift + Up/Down : 移动方法
+
+后缀补全
+.for(补全foreach语句)
+.format(使用String.format()包括一个字符串)
+.cast(使用类型转换包裹一个表达式)
+
+Shift + F6(Rename) : 修改名称
+
+Ctrl + Alt + T(Surround With) : 包裹代码
+
+Ctrl + Shift + Delete(Unwrap Remove) : 移除包裹代码
+

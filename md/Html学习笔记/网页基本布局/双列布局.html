@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双列布局#固定宽度的两列布局</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.left {
+			width :20%;/*宽度自适应*/
+			height: 500px;
+			background: #ccc;
+			float: left;/*向左浮动*/
+		}
+		.right {
+			width: 80%;
+			height: 500px;
+			background:#896;
+			float: right;/*向右浮动*/
+		}
+		.main {
+			width:800px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="main"><!-- 给他们添加一个包裹去固定宽度 -->
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+</body>
+</html>

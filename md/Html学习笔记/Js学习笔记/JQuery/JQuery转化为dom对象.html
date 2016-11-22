@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="jquery.js"></script>
+</head>
+
+	<div>元素一</div>
+	<div>元素二</div>
+	<div>元素三</div>
+    
+    <p>
+    	JQuery中通过$('#id')来获取查找id<br>
+		通过$(".class")来查找class<br>
+        获取所有元素$('*')<br>
+        JQuery层级选择器<br>
+        $("parent > child")子选择器，选择指定parent下面的所有child<br> 
+        $("ancestor descendant")后代选择器，选择给定祖先的所有<b>后代</b>元素<br>
+        $("prev + next") 相邻兄弟选择器，选择所有紧邻在prev 元素后面的next元素<br>
+        $("prev ~ siblings") 一般兄弟选择器，匹配prev元素后面的所有兄弟元素，具有相同的父元素，并匹配过滤siblings选择器
+        
+    </p>
+    <script type="text/javascript">
+		//将Jquery对象转化为dom对象
+		var $div1 = $('div'); //jQuery对象
+		//Jquery获取到的是一组类对象
+		//js方法 var div = $div[0];
+		var div1 = $div1.get(1);//通过get方法获取dom对象
+		div1.style.color = 'red'; //操作dom对象的属性
+		
+		//将dom对象转化为Jquery对象
+		var div = document.getElementsByTagName('div'); //dom对象
+		var $div = $(div); //jQuery对象
+		var $first = $div.first(); //找到第一个div元素
+		$first.css('color', 'red'); //给第一个元素设置颜色
+		
+    </script>
+<body>
+</body>
+</html>

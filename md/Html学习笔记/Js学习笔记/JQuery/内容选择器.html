@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内容筛选选择器</title>
+<link rel="stylesheet" href="imooc.css" type="text/css">
+<script src="jquery.js"></script>
+</head>
+
+	<table border="1">
+    	<tr>
+        	<th>选择器</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+        	<td>$(":contains(text)")</td>
+            <td>选择所有包含指定文本的元素</td>
+        </tr>
+        <tr>
+        	<td>$(":parent")</td>
+            <td>选择所有包含有子元素或者文本的元素</td>
+        </tr>
+        <tr>
+        	<td>$(":empty")</td>
+            <td>选择所有没有子元素的元素（包含文本节点）</td>
+        </tr>
+        <tr>
+        	<td>$("has(selector)")</td>
+            <td>选择元素中至少包含指定选择器的元素</td>
+        </tr>
+    
+    </table>
+    <ol>
+    	<li>:contains和:has都有查找的意思，但是contains查找包含指定文本的元素，has查找包含指定元素的元素</li>
+        <li>如果contains匹配的文本包含在元素的子元素中。同样认为是符合条件的</li>
+        <li>:parent和:empty是相反的，两者涉及的子元素，包含文本节点</li>
+    </ol>
+
+	<h2>内容筛选器</h2>
+    <h3>:contains/:has</h3>
+    <div class="left">
+        <div class="div">
+            <p>:contains</p>
+        </div>
+        <div class="div">
+            <p>:contains</p>
+        </div>
+        <div class="div">
+            <p>
+                <span>:has</span>
+            </p>
+        </div>
+        <div class="div">
+            <p>:contains</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //查找所有class='div'中DOM元素中包含"contains"的元素节点
+        //并且设置颜色
+        $(".div:contains(':contains')").css("color", "#CD00CD");
+    </script>
+
+    <script type="text/javascript">
+        //查找所有class='div'中DOM元素中包含"span"的元素节点
+        //并且设置颜色
+        $(".div:has(span)").css("color", "blue");
+    </script>
+
+
+    <h3>:parent/:empty</h3>
+    <div class="left">
+        <div class="aaron">
+            <a>:parent</a>
+        </div>
+        <div class="aaron">
+            <a>:parent</a>
+        </div>
+        <div class="aaron">
+            <a>:parent</a>
+        </div>
+        <div class="aaron">
+            <a></a>
+        </div>
+    </div>
+    <script type="text/javascript">
+       //选择所有包含子元素或者文本的a元素
+       //增加一个蓝色的边框
+       $("a:parent").css("border", "3px groove blue");
+    </script>
+
+    <script type="text/javascript">
+       //找到a元素下面的所有空节点(没有子元素)
+       //增加一段文本与边框
+       $("a:empty").text(":empty").css("border", "3px groove red"); 
+    </script>
+
+
+<body>
+</body>
+</html>

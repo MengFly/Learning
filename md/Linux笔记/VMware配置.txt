@@ -1,0 +1,58 @@
+建议的VMware配置
+CPU：建议主屏为1GHz以上
+内存：建议1GB以上
+硬盘：建议分区空闲空间8GB以上
+
+1、新建虚拟机
+标准：
+	不能使用安装镜像文件（这是简化安装，不符合教学要求）
+	选择以后再安装操作系统
+	选择安装的操作系统
+	选择CentOS32位的
+	
+主分区：
+	最多只能有4个
+扩展分区：
+	最多只能有一个
+	主分区加扩展分区最多有4个
+	不能写入数据，只能包含逻辑分区
+逻辑分区：
+
+设备文件名：
+ IDE硬盘：/dev/hd[a-d]
+ SCSI/SATA/USB硬盘：/dev/sd[a-p]
+ 光驱：/dev/cdrom或/dev/hdc
+ 软盘：/dev/fd[0-1]
+ 打印机（25针）：/dev/lp[0-2]
+ 打印机（USB）： /dev/usb/lp[0-15]
+ 鼠标：dev/mouse
+
+ 例如：hda1:第一块IDE硬盘的第一块分区
+ a表示第一块，1表示第一块分区
+
+挂载：
+	必须分区：
+		/ 根分区
+		swap分区（交换分区，内存两倍，不超过2GB）
+	推荐分区：
+		/boot（启动分区。200MB）
+
+配置虚拟机
+	开机时按F2键，进入boot界面
+	修改Boot项，修改默认启动顺序
+	将CD-ROM Drive提升到第一项
+	如果装完了Linux的话还要进入boot界面
+	将Hard Drive改为第一项
+
+Install or upgrade an existing system : 安装或升级现有系统
+Install system whth video driver : 安装过程采用基本的显卡驱动
+Rescue installed system : 进入系统修复模式
+Boot from local drive : 退出安装从硬盘启动
+Memory test : 存储介质检测
+
+创建自定义分区：
+标准分区--挂载点（/home）2G
+标准分区--挂载点（/boot）200MB
+标准分区--挂载点 1GB 文件类型swap
+标准分区--挂载点（/）使用全部生育空间
+
