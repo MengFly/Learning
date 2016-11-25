@@ -3,9 +3,6 @@
 
 ## 包介绍
 
-### encode_decode
-这里面放着一些有关加解密的代码，相关的笔记在[md/encode_decode](md/encode_decode)里面
-
 ### Android
 有关Android的一些笔记[md/Android](md/Android)
 
@@ -14,9 +11,10 @@
 
 ### Java
 有关java的一些学习笔记[md/java](md/java)
-#### Struts2
-struts的学习笔记[md/java/Struts2](md/java/Struts2)
- 
++ **Struts2**
+ struts的学习笔记[md/java/Struts2](md/java/Struts2)
++ **encode_decode**
+ 这里面放着一些有关加解密的代码，相关的笔记在[md/java/encode_decode](md/java/encode_decode)里面 
 ### Linux笔记
 Linux的一些 学习笔记[md/Linux笔记](md/Linux笔记)
 
