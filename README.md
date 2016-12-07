@@ -35,7 +35,7 @@ Linux的一些 学习笔记[md/Linux笔记](md/Linux笔记)
 这里面是我的算法学习代码，相关笔记在[md/suanfa](md/suanfa)里面
 
 ### BaseComAVR
-这里是我学习AVR单片机的例子程序.有兴趣的可以看看[BaseComAVR](md/BaseComAVR)
+这里是我学习AVR单片机的例子程序.有兴趣的可以看看[BaseComAVR](md/BascomAVR)
 ### 其他一些编程软件
  这里面放置这一些有关编程软件的学习笔记[md/其他一些编程软件](md/其他一些编程软件)
  
