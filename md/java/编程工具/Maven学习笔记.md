@@ -32,7 +32,9 @@ src
 archetype插件
 用于创建符合maven规定的目录骨架
 使用命令 mvn archetype:generate
+使用命令 mvn archetype:generate -DarchetypeCatalog=internal 让它不要从远程服务器上取catalog:
 之后会依次提示输入groupId(一般是公司网址反写+项目名),artifacId(项目名-模块名),version(版本号), package(项目所在的包名).  
 
 ### 更改本地仓库的地址
 Settings.xml --> localRepository
+
