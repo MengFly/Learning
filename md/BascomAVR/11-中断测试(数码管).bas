@@ -4,7 +4,12 @@ Config Portc = output
 Config porta.3 = output
 Config Porta.4 = output
 
-Config Int0 = FALLING
+porta.4 = 1
+portc = &HFF
+Porta.4 = 0
+porta.3 = 1
+
+Config Int0 = Falling
 Config Int1 = FALLING
 
 On Int0 int0_isr
@@ -25,7 +30,7 @@ Restore Daima
 Dim run as bit : run = 0
 
 I = 1
-porta.3 = 1
+
 Do
    if run = 1 then
       gosub Shun
