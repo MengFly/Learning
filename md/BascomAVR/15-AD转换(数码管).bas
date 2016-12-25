@@ -27,7 +27,6 @@ restore DuanMa
 for i = 1 to 10
    read d(i)
 Next
-Cls
 Do
    idle
 Loop
@@ -35,7 +34,6 @@ Loop
 End
 
 adc_isr:
-   cls
   ADCNumber = getADC(1)
   'ADCNumber = 1024  测试的数字,测试程序是否正常
 
