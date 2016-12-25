@@ -1,0 +1,137 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Welcome to web.py! (web.py)</title> 
+  <link rel="stylesheet" type="text/css" href="../static/hello2res/webpy-new.css"> 
+  <link rel="SHORTCUT ICON" href="http://webpy.org/static/favicon.ico"> 
+</head><body> 
+ 
+        <div id="header"><table class="header"><tbody><tr>
+                <td class="logo"><a href="http://webpy.org/" title="Home"><img src="../static/hello2res/webpy.gif" alt=""></a></td> 
+<td class="blurb">“Think about the ideal way to write a web app.<br>Write the code to make it happen.” [<a href="http://webpy.org/philosophy">more...</a>]</td> </tr>
+</tbody></table>
+        </div> 
+        <div id="location"> 
+                <a href="http://webpy.org/">home</a> &gt; Welcome to web.py!
+        </div> 
+<div id="container"> 
+<div id="sidebar">
+<strong>get started:</strong>
+<ul class="body">
+  <li><a href="http://webpy.org/install">install</a></li>
+  <li><a href="http://webpy.org/docs/0.3/tutorial">tutorial</a></li>
+</ul>
+<strong>learn more:</strong>
+<ul class="body">
+<li><a href="http://webpy.org/docs/0.3/api">api reference</a></li>
+<li><a href="http://webpy.org/cookbook/">cookbook</a></li>
+<li><a href="http://webpy.org/src/">code examples</a></li>
+</ul>
+
+<strong>dive in:</strong>
+<ul class="body"> 
+<li><a href="https://github.com/webpy/webpy">source code</a></li>
+<li><a href="http://groups.google.com/group/webpy/">mailing list</a></li>
+<li><a href="https://github.com/webpy/webpy/issues">issue tracker</a></li>
+</ul>
+</div>
+
+<div id="main"> 
+<div id="content" class="body"> 
+<p><strong>web.py</strong> is a web framework for Python that is as 
+simple as it is powerful. web.py is in the public domain; you can use it
+ for whatever purpose with absolutely no restrictions.</p>
+
+<div style="float: right; margin: 1em">
+<pre>import web
+        
+urls = (
+    '/(.*)', 'hello'
+)
+app = web.application(urls, globals())
+
+class hello:        
+    def GET(self, name):
+        if not name: 
+            name = 'World'
+        return 'Hello, ' + name + '!'
+
+if __name__ == "__main__":
+    app.run()
+</pre>
+<em>A complete web.py application.</em>
+</div>
+
+
+<h2>Get Started</h2>
+
+<p>web.py 0.38 is the latest released version of web.py. You can install it by running:</p>
+
+<pre><code>pip install web.py
+</code></pre>
+
+<p>Or to get the latest development version from git:</p>
+
+<pre><code>git clone git://github.com/webpy/webpy.git
+ln -s `pwd`/webpy/web .
+</code></pre>
+
+<h2>Who uses web.py?</h2>
+
+<p>web.py was originally published while Aaron Swartz worked at <a href="http://reddit.com/">reddit.com</a>,
+ where the site used it as it grew to become one of the top 1000 sites 
+according to Alexa and served millions of daily page views. "It's the 
+anti-framework framework. web.py doesn't get in your way," explained 
+founder Steve Huffman. (The site was rewritten using other tools after 
+being acquired by Condé Nast.)</p>
+
+<ul>
+<li><p><a href="http://frinki.com/">Frinki</a>, a new social network in Spanish.</p></li>
+<li><p><a href="http://yandex.ru/">Yandex</a>, the leading Russian search engine (their homepage alone receives 70 million daily page views).</p></li>
+<li><p><a href="http://makehistory.national911memorial.org/">Make History</a>,
+ a project of the 9/11 Memorial Museum, is powered by web.py on top of 
+Google App Engine. On September 11, 2009, it received nearly 200,000 
+visitors. "It's my first time working with web.py and basically with 
+Python," noted its developer. "web.py was awesome."</p></li>
+<li><p><a href="http://www.oyster.com/">Oyster.com</a>, a website that 
+reviews and photographs hotels, uses web.py for the entire site. They 
+note that "web.py gives us the control we need for a large-scale 
+website". As of Jan 2013, Oyster.com renders about 230,000 pages per 
+day.</p></li>
+<li><p><a href="http://www.local.ch/">local.ch</a>, the official online 
+Telephone Directory for Switzerland - using web.py in a backend service 
+for tracking expired content - code open-sourced as <a href="http://github.com/harryf/urldammit/tree/master">urldammit</a>.</p></li>
+<li><p><a href="http://www.archivd.com/">archivd.com</a>, a web application for collaborative research and archiving, is built on web.py.</p></li>
+<li><p><a href="http://www.chiefmall.com/">Chiefmall</a>, a contractor search tool, was built with web.py.</p></li>
+<li><p><a href="http://pudung.com/">pudung.com</a>, Online Store based in Jakarta, Indonesia, is using <a href="https://github.com/nopri/onlinestore-multi">onlinestore-multi</a> (Simple Online Store application built using Python, web.py, jQuery and MySQL).</p></li>
+</ul>
+
+
+<p>"[web.py inspired the] web framework we use at FriendFeed [and] the webapp framework that ships with App Engine..."<br>
+<span class="cite">&nbsp;&nbsp;—&nbsp; <a href="http://bret.appspot.com/entry/experimenting-google-app-engine">Brett Taylor</a>, co-founder of FriendFeed and original tech lead on Google App Engine</span></p>
+
+<p>"Django lets you write web apps in Django. TurboGears lets you write 
+web apps in TurboGears. Web.py lets you write web apps in Python."<br>
+<span class="cite">&nbsp;&nbsp;—&nbsp; Adam Atlas</span></p>
+
+<p>"Guido [van Rossum, creator of Python], you'll probably find that 
+web.py best suits your style. ... If you don't like it, I can't imagine 
+which of the other dozens of frameworks out there you <em>would</em> like." <br>
+<span class="cite">&nbsp;&nbsp;—&nbsp; Phillip J. Eby, creator of the Python Web Server Gateway Interface (WSGI) <a href="http://www.artima.com/forums/flat.jsp?forum=106&amp;thread=146149&amp;start=30&amp;msRange=15">#</a></span></p>
+
+<div style="clear: both;"></div> 
+ 
+</div> 
+ 
+</div> 
+</div>
+        <div id="footer"> 
+    <p>started by <a style="color: gray;" href="http://www.aaronsw.com/">Aaron Swartz</a> (<a style="color: black;" href="mailto:webpy@aaronsw.com">webpy@aaronsw.com</a>)</p>
+
+<p><a href="https://github.com/webpy/webpy.github.com/blob/master/">fork this page on GitHub</a></p>
+</div> 
+ 
+ 
+ 
+</body></html>
