@@ -1,3 +1,4 @@
+@@ -1,141 +0,0 @@
 '获取到数字对应的二进制端码
 Declare Function GetNumberCode(number as word) as byte
 '在数码管指定位置显示数字
