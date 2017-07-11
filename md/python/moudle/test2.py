@@ -35,7 +35,7 @@ else :
 
 	
 # for 循环遍历list中的元素
-listExample = ["I", "Love", "潘", "玥", "利"]
+listExample = ["I", "Love", "P", "Y", "L"]
 for name in listExample :
     print name
 
@@ -133,7 +133,7 @@ else :
     print 'input error'
 
 # 更新set(添加元素add()，删除元素remove())
-myset = set(['I', 'Love', '潘', '玥', '利'])
+myset = set(['I', 'Love', 'P', 'Y', 'L'])
 myset.add(0)
 myset.remove(0)
 
