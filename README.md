@@ -6,15 +6,8 @@
 ### Android
 有关Android的一些笔记[Android](Android)
 
-### Html学习笔记
-有关Html, CSS, JavaScript的学习笔记[Html学习笔记](Html学习笔记)
-
 ### Java
 有关java的一些学习笔记[java](java)
-+ **Struts2**
- struts的学习笔记[java/Struts2](java/Struts2)
-+ **encode_decode**
- 这里面放着一些有关加解密的代码，相关的笔记在[java/encode_decode](java/encode_decode)里面 
 
 ### Linux笔记
 Linux的一些 学习笔记[Linux笔记](Linux笔记)
@@ -24,6 +17,9 @@ Linux的一些 学习笔记[Linux笔记](Linux笔记)
  
 ### qa
 这里面是我在编程过程中的一些问题的汇总,以及一些解决方法[qa](qa)
+
+### PhotoShop
+有感PhotoShop的学习笔记[PhotoShop](PhotoShop)
 
 ### SmallStory
 个人写的一些小说(闲着没事瞎写的~~~)[SmallStory](SmallStory)
@@ -36,6 +32,7 @@ Linux的一些 学习笔记[Linux笔记](Linux笔记)
 
 ### BaseComAVR
 这里是我学习AVR单片机的例子程序.有兴趣的可以看看[BaseComAVR](BascomAVR)
+
 ### 其他一些编程软件
  这里面放置这一些有关编程软件的学习笔记[其他一些编程软件](其他一些编程软件)
 
