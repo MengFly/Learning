@@ -1,0 +1,3 @@
+## EditText
+### **EditText怎么不自动获取焦点，或者键盘不自动弹出**[已解决]
+> 在它的父控件里面设置focusable=true以及focusableInTouchMode=true,让它的父控件截获焦点即可。
