@@ -24,11 +24,24 @@ print('c', end='\n')
 print('This is the first sentence. \
 This is the second sentence.')
 
+print( '''Line1
+Line2
+Line3
+''')
+
 # 添加r的时候，在里面的字符都会被原样的输出
 print(r'Newlines are indicated by \n')
 
 #Python 是强（Strongly）面向对象的，因为所有的一切都是对象， 包括数字、字符串与函数。
 
+
+True or True
+False and False
+not False
+
+# Python 会自动把0、空字符串''、以及None看成为False，其余的都看为true
+print('hello', 'python' or 'world')
+print('hello', "" or 'world')
 
 
 

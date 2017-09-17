@@ -6,6 +6,11 @@ for item in shoplist:
              print(item, end=" ")
 
 shoplist.append('rice')
+# 删除最后一个pop()
+shoplist.pop()
+# 删除某个元素pop(index)
+shoplist.pop(1)
+
 print('My shopping list is now ', shoplist)
 shoplist.sort()
 print('My shopping sort list is now ', shoplist)
@@ -30,9 +35,9 @@ print(len(oneitem))
 # 字典
 #记住字典中的键/值对是没有顺序的。如果你想要一个特定的顺序，那么你应该在使用前自己对它们排序
 ab= { 'swaroop' : 'swaroop@swaroopch.com',
-                          'Larry' : 'larry@wall.org',
-                          'Matsumoto' : 'matz@ruby-lang.org',
-                          'Spammer' : 'spammer@hotmail.com'
+        'Larry' : 'larry@wall.org',
+         'Matsumoto' : 'matz@ruby-lang.org',
+         'Spammer' : 'spammer@hotmail.com'
       }
 print('Swaroop\'s address is', ab['swaroop'])
 del ab['Spammer']
@@ -94,11 +99,29 @@ mylist = ['Brazil', 'Russia', 'India', 'China']
 print(delimiter.join(mylist))
 
 
+listone = [2, 3, 4]
+listtwo = [2*i for i in listone if i > 2]
+print(listtwo)
 
 
 
+# 复杂表达式
+# 可以通过一个复杂的列表生成式把他生成一个HTML表格
+d = {'Adam' : 95, 'Lisa' : 85, 'Bart' : 59}
+tds = ['<tr><td>%s</td><td>%s</td></tr>' %(name, score) for name, score in d.iteritems()]
+# 字符串可以通过%进行格式化，用指定的参数替代%s，字符串的join()方法可以把一个list拼接成一个字符串
+print('<table>')
+print('<tr><th>Name</th><th>Score</th><tr>')
+print('\n'.join(tds))
+print('</table>')
 
 
+# 多层表达式
+[m + n for m in 'ABC' for n in '123']
+
+
+# 生成三个数相同的三位数
+print [str(m) + str(n) + str(o) for m in range(0, 10) for n in range(0, 10) for o in range(0, 10) i
 
 
 
