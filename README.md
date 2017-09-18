@@ -1,5 +1,6 @@
 # 项目介绍
 这个仓库里面放置的都是平时的学习笔记，其实也不限于Java的
+你也可以[点击这里](http://nbviewer.jupyter.org/github/MengFly/Learning/tree/master/)来查看所有的笔记。
 
 ## 包介绍
 
