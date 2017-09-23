@@ -1,41 +1,48 @@
 # 项目介绍
 这个仓库里面放置的都是平时的学习笔记，其实也不限于Java的
-你也可以[点击这里](http://nbviewer.jupyter.org/github/MengFly/Learning/tree/master/)来查看所有的笔记。
+
+> **说明**
+也许在Github上面没有办法看到后缀名为ipynb的jupyterNotebook笔记的内容，你可以[点击这里](http://nbviewer.jupyter.org/github/MengFly/Learning/tree/master/)来查看所有的笔记。
 
 ## 包介绍
 
 ### Android
 有关Android的一些笔记[Android](Android)
++ Android基础控件
++ DataBinding
++ software test
 
 ### Java
 有关java的一些学习笔记[java](java)
-
-### Linux笔记
-Linux的一些 学习笔记[Linux笔记](Linux笔记)
++ 知识点
++ encode_decode
++ SprintMVC
++ Maven
 
 ### python
 里面放置这一些python代码[python](python)
- 
-### qa
-这里面是我在编程过程中的一些问题的汇总,以及一些解决方法[qa](qa)
-
-### PhotoShop
-有感PhotoShop的学习笔记[PhotoShop](PhotoShop)
-
-### SmallStory
-个人写的一些小说(闲着没事瞎写的~~~)[SmallStory](SmallStory)
-
-### software test
-有关软件测试的笔记[software test](software test)
++ db
++ jupyter笔记
++ 爬虫
++ 学习笔记(python基础)
 
 ### suanfa
 这里面是我的算法学习代码，相关笔记在[suanfa](suanfa)里面
++ random
++ sort
 
-### BaseComAVR
-这里是我学习AVR单片机的例子程序.有兴趣的可以看看[BaseComAVR](BascomAVR)
+### 其他语言
+除了上面写的三种语言的其他的语言的学习笔记[其他语言](其他语言)
++ BascomAVR
++ html
++ Linux
++ shell
++ 思维导图
 
-### 其他一些编程软件
- 这里面放置这一些有关编程软件的学习笔记[其他一些编程软件](其他一些编程软件)
+### 软件使用
+有关一些软件的使用方法，包括和编程有关和无关的[软件使用](软件使用)
++ Photoshop
 
-### 思维导图
-这里是有关思维导图笔记的一些东西[思维导图](思维导图)
+### 随便写写，不给链接<img src="随便写写/img/1.jpg" width='40' height='40'/>
+**随便写的东西，不值得看！！！**
++ 不给概要.....
