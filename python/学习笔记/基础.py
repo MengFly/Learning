@@ -1,3 +1,4 @@
+# coding=utf-8
 age = 20
 name = 'Swaroop'
 # 格式化
@@ -17,7 +18,7 @@ print('{0:_^12}'.format('hello'))
 print('{name} wrote {book}'.format(name='Swaroop',  book='A byte of python'))
 
 #指定print的结尾不是换行符
-print('a', end='')
+print('a', end="")
 print('b', end='')
 print('c', end='\n')
 
