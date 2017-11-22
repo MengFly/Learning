@@ -15,9 +15,9 @@
 ### Java
 有关java的一些学习笔记[java](java)
 + 知识点
-+ encode_decode
-+ SprintMVC
-+ Maven
++ encode_decode--java加解密
++ Struts2
++ 设计模式
 
 ### python
 里面放置这一些python代码[python](python)
