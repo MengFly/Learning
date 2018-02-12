@@ -2,6 +2,7 @@ bin
 .settings
 .classpath
 .project
+.idea
 #忽略Vim缓存备份文件
 *~
 # 忽略配置文件
