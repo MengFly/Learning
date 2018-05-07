@@ -1,0 +1,7 @@
+1.中本聪，《比特币白皮书：一种点对点的电子现金系统》 
+2.精通比特币（第二版）
+3.区块链技术指南
+4.从零到一用 Python 写一个区块链 Daniel van Flymen
+
+1.比特币项目地址：https://github.com/bitcoin/bitcoin
+2.flask doc地址：http://docs.jinkan.org/docs/flask/
