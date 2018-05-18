@@ -9,3 +9,11 @@ bin
 *.cfg
 # 忽略默认隐藏的文件
 .*
+
+# BaseComAVR中的忽略文件
+*.bin
+*.bm
+*.dbg
+*.rpt
+*.SIM
+*.obj
