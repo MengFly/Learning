@@ -1,5 +1,6 @@
-$regfile = "m16def.dat"
-$crystal = 8000000
+$regfile = "m16def.dat"    '定义单片机型号'
+$crystal = 8000000         '定义晶振频率'
+'配置输出端口'
 Config Portc = output
 Config porta.3 = output
 Config Porta.4 = output
@@ -18,7 +19,7 @@ Enable Interrupts                                           '开启全局中断
 Enable Int0                                                 '开启Int中断
 Enable Int1                                                 '开启Int1中断
 
-Dim A(7) as Byte
+Dim A(7) as Byte     '定义存储断码的数组'
 Dim I as Byte
 
 Restore Daima
@@ -33,9 +34,9 @@ I = 1
 
 Do
    if run = 1 then
-      gosub Shun
+      gosub Shun     '进入顺时针旋转的子程序'
    else
-      gosub Ni
+      gosub Ni       '进入逆时针旋转的子程序'
    end if
    Portc = A(i)
    WAITMS 500
@@ -57,7 +58,6 @@ return
 Ni:
    decr i
    if i < 1 then i = 6
-
 return
 
 'Int0的程序

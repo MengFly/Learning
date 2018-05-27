@@ -11,12 +11,13 @@ PortB = &B11110010
 '配置Lcd显示
 Config LcdPin = PIN , Db4 = PORTA.4 , Db5 = PORTA.5 , Db6 = Porta.6 , Db7 = Porta.7 , Rs = Porta.2 , E = PORTA.3
 
-Config Timer0 = Timer , Prescale = 8
-On ovf0 timer0_isr
+Config Timer0 = Timer , Prescale = 8   '配置定时器'
+On ovf0 Timer0_isr   '配置定时器子程序'
+
 Enable ovf0
 Enable interrupts
 Load timer0 , 200
-Start Timer0
+Start Timer0         '开启定时器'
 
 
 'Bit 类型变量,用于标志步进电机是顺时针旋转,还是逆时针旋转

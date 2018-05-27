@@ -75,6 +75,7 @@ showADNumber:
    waitms 5
 Return
 
+'获取到数字对应的二进制端码
 Function Getnumbercode(number As word) As byte
    Local Numbercode As byte : NumberCode = 1
    Select Case Number
@@ -104,9 +105,8 @@ Function Getnumbercode(number As word) As byte
    Getnumbercode = Numbercode
 End Function
 
-
+'在数码管指定位置显示数字
 Sub Shownumber(number As word , Where As String)
-
    '写入数据并进行锁存
    Porta.3 = 1
    Portc = Getnumbercode(number)
@@ -119,8 +119,7 @@ Sub Shownumber(number As word , Where As String)
 
 End Sub
 
-
-
+'获取到在数码管那里显示的端码
 Function Getwherecode(where As String) As byte
      Local Wherecode As byte
      Select Case Where

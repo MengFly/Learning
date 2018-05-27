@@ -4,8 +4,8 @@ $crystal = 8000000
 Config Portd = output
 
 Dim B(8) As Byte                                            '用于存储步进电机波形的编码的数组
-Dim I as Byte
-Dim X as integer
+Dim I as Byte                                               '用于存储步进电机端码位置'
+Dim X as integer                                            '步进电机端码循环次数'                           
 
 '将数据读入数组
 restore BianMa

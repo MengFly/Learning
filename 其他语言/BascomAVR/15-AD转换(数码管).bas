@@ -2,10 +2,11 @@ $regfile = "m16def.dat"
 $crystal = 8000000
 
 Dim I as word : I = 0
-Dim d(10) as Byte
-Dim ADCNumber as word
-Dim modx as word
+Dim d(10) as Byte     '定义数组进行端码的存储'
+Dim ADCNumber as word   '定义用于存储ADC端口的变量'
+Dim modx as word        '存储中间变量的变量'
 
+'配置输出端口'
 Config porta.3 = Output
 Config porta.4 = OUTPUT
 Config Portc = OUTPUT
@@ -23,16 +24,19 @@ Enable Adc
 '开启AD转换
 start adc
 
+'读取端码'
 restore DuanMa
 for i = 1 to 10
    read d(i)
 Next
+
 Do
    idle
 Loop
 
 End
 
+'AD转换中断程序'
 adc_isr:
   ADCNumber = getADC(1)
   'ADCNumber = 1024  测试的数字,测试程序是否正常
@@ -85,6 +89,7 @@ adc_isr:
 
 Return
 
+'0-9的端码'
 DuanMa:
 data &B00111111 , &B00000110 , &B01011011 , &B01001111 , &B01100110
 data &B01101101 , &B01111101 , &B00000111 , &B01111111 , &B01101111
