@@ -1,17 +1,18 @@
 # encoding:utf-8
-'''
+"""
 module: sort.sort_quick : 
 快速排序，以及一些相关的操作
 @author: mengfei
-'''
+"""
 from numpy import random
-from utils.array_utils import create_random_array
+from suanfa.utils.array_utils import create_random_array
+
 
 # 找出主元的位置，并根据主元的位置进行简单排序
 def partition(a, p, r):
     # 主元设定为元素的最后一个
     x = a[r]
-    i = p-1
+    i = p - 1
     for j in range(p, r):
         if a[j] <= x:
             i = i + 1
@@ -34,13 +35,14 @@ def partition(a, p, r):
 def quick_sort(a, p, r):
     if p < r:
         q = partition(a, p, r)
-        quick_sort(a, p, q-1)
-        quick_sort(a, q+1, r)
+        quick_sort(a, p, q - 1)
+        quick_sort(a, q + 1, r)
     return a
+
 
 # 将最后一个元素和随机的位置交换，达到主元是随机位置的目的
 def randomized_partition(a, p, r):
-    i = random.randint(p, r+1)
+    i = random.randint(p, r + 1)
     temp = a[r]
     a[r] = a[i]
     a[i] = temp
@@ -55,8 +57,9 @@ def randomized_quick_sort(a, p, r):
         randomized_quick_sort(a, q + 1, r)
     return a
 
-#test
-if __name__ == '__main__': 
+
+# test
+if __name__ == '__main__':
     test_arr = create_random_array(100)
-    print(quick_sort(test_arr, 0, len(test_arr)-1))
-    print(randomized_quick_sort(test_arr, 0, len(test_arr)-1))
+    print(quick_sort(test_arr, 0, len(test_arr) - 1))
+    print(randomized_quick_sort(test_arr, 0, len(test_arr) - 1))
